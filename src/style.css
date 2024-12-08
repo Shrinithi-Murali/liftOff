@@ -399,14 +399,13 @@ footer {
   scroll-margin-block-end: 110px;
 }
 
-@media (min-width: 768px) {
-  nav .logo {
-    width: auto;
-  }
-  .footer-items {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.visually-hidden {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 768px;
@@ -490,6 +489,9 @@ footer {
   }
   .footer-items {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-items a {
+    text-align: left;
   }
 }
 @media (min-width: 1200px) {

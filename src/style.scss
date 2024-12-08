@@ -349,15 +349,11 @@ footer {
     scroll-margin-block-end: 110px;
 }
 
-
-@media (min-width: $md) {
-    nav .logo {
-        width: auto
-    }
-
-    .footer-items {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.visually-hidden{
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
 }
 
 @media (min-width: $lg) {
@@ -450,6 +446,9 @@ footer {
 
     .footer-items {
         grid-template-columns: repeat(3, 1fr);
+        a{
+            text-align: left;
+        }
     }
 }
 
