@@ -136,6 +136,7 @@ section:nth-of-type(even) {
   font-weight: 800;
   font-style: normal;
   color: #15364C;
+  overflow: hidden;
 }
 .info-section h1 {
   font-size: 32px;

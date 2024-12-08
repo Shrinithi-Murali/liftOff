@@ -114,6 +114,7 @@ section:nth-of-type(even) {
 .info-section {
     @include raleway($raleway-extra-bold);
     color: $header;
+    overflow: hidden;
 
     h1 {
         font-size: 32px;
