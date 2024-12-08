@@ -1,0 +1,462 @@
+@import "./partials/var";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include raleway($raleway-regular);
+}
+
+header {
+    padding: 12px;
+    background-color: $header;
+    color: $white;
+    @include justify-content(30px, column);
+}
+
+.container {
+    max-width: $sm;
+    margin: 0 auto;
+    padding: 10px;
+    padding-block: 50px;
+    @include justify-content(10px, column);
+    align-items: center;
+}
+
+.section {
+    gap: 20px;
+}
+
+nav {
+    @include justify-content(0, row, center);
+    position: relative;
+    align-items: center;
+
+    .logo {
+        width: 180px;
+    }
+}
+
+.header-nav-items {
+    display: none;
+}
+
+.header-h1 {
+    font-size: 70px;
+}
+
+.slogan {
+    width: 100%;
+}
+
+.menu {
+    position: absolute;
+    right: 5px;
+}
+
+.nav-cta--bottom {
+    @include justify-content(10px, column);
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .text {
+        width: 90px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.divider {
+    display: flex;
+
+    .div1 {
+        @include divider($color-1)
+    }
+
+    .div2 {
+        @include divider($color-2)
+    }
+
+    .div3 {
+        @include divider($color-3)
+    }
+
+    .div4 {
+        @include divider($color-4)
+    }
+}
+
+section:nth-of-type(even) {
+    background-color: $section;
+}
+
+.Storefront {
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-section {
+    @include raleway($raleway-extra-bold);
+    color: $header;
+
+    h1 {
+        font-size: 32px;
+        text-shadow: 3px 2px 1px $border;
+    }
+}
+
+.outline {
+    position: absolute;
+    left: 40%;
+    z-index: -1;
+    top: -5px;
+}
+
+.title {
+    @include raleway($raleway-medium);
+    display: flex;
+    position: relative;
+    font-size: 22px;
+    color: $header;
+
+    .line {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        color: $black;
+    }
+}
+
+
+button {
+    background-color: $color-4;
+    border-radius: 4px;
+    padding: 8px;
+    padding-inline: 16px;
+    border: none;
+    @include raleway($raleway-bold);
+    color: $header;
+}
+
+.description {
+    @include raleway($raleway-regular);
+    color: $color-5;
+}
+
+.profile {
+    @include justify-content(10px, column);
+    align-items: center;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 4px;
+        box-shadow: $blur-box-shadow;
+    }
+
+    p {
+        @include raleway($raleway-regular);
+        color: $color-5
+    }
+}
+
+.profile-img {
+    display: flex;
+    order: -1;
+}
+
+.headshot {
+    position: relative;
+
+    .profile-bg {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.footer-desc {
+    margin-top: 20px;
+    @include caveat($caveat-regular-italic);
+    color: $color-5;
+}
+
+.workAround-section {
+    @include justify-content(10px, column);
+    flex: 1 1 100%;
+}
+
+.workAround {
+    @include justify-content(10px, column);
+    align-items: center;
+    color: $color-5;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h3 {
+        @include raleway($raleway-bold);
+    }
+
+    p {
+        @include raleway($raleway-regular);
+    }
+}
+
+footer {
+    background-color: $header;
+    @include justify-content(0, column);
+}
+
+.list {
+    @include justify-content(0, row, space-between);
+    text-align: left;
+
+    ol {
+        padding: 30px;
+        list-style: none;
+    }
+
+    ol li {
+        position: relative;
+        margin-bottom: 20px;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        color: $color-5;
+    }
+
+    ol li span.number {
+        margin-right: 10px;
+        padding: 10px;
+        @extend %unordered-list-style;
+        color: $white;
+    }
+}
+
+.unordered-list {
+    margin-left: 20px;
+    padding: 20px;
+
+    ul li {
+        text-align: left;
+        margin-bottom: 10px;
+        list-style-image: url("./assets/Blob-small.svg");
+        color: $color-5;
+    }
+}
+
+.form {
+    @include justify-content(10px, row);
+    flex-wrap: wrap;
+}
+
+.form-fields {
+    @include justify-content(10px, column);
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    color: $color-5;
+
+    label {
+        text-align: left;
+    }
+
+    input {
+        border-radius: 4px;
+        padding: 8px;
+        width: 100%;
+        border: 2px solid $border;
+        text-align: left;
+
+        &::placeholder {
+            @include raleway($raleway-regular);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.section-design div {
+    margin-block: 50px;
+
+    img {
+        border-radius: 8px;
+        margin-bottom: 10px;
+        box-shadow: $blur-box-shadow;
+    }
+}
+
+.plan-blueprint {
+    display: none;
+}
+
+.footer {
+    color: $white
+}
+
+.footer-logo {
+    @include justify-content(10px, column);
+    order: 1;
+
+    >img {
+        display: none;
+    }
+
+    .social {
+        @include justify-content(10px, row, space-between);
+    }
+}
+
+.footer-items {
+    display: grid;
+    gap: 20px;
+}
+
+#form {
+    scroll-margin-block-start: 110px;
+    scroll-margin-block-end: 110px;
+}
+
+
+@media (min-width: $md) {
+    nav .logo {
+        width: auto
+    }
+
+    .footer-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: $lg) {
+    .container {
+        max-width: $md;
+    }
+
+    nav {
+        margin-inline: 30px;
+    }
+
+    .nav-cta--bottom {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .text {
+            width: 120px;
+        }
+    }
+
+    .workAround-section {
+        @include justify-content(10px, row, space-between);
+    }
+
+    .workAround {
+        max-width: 300px;
+    }
+
+    .section-design div {
+        @include justify-content(50px, row);
+        align-items: center;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .profile {
+        flex-direction: row;
+
+        p {
+            text-align: left;
+        }
+
+        .profile-img {
+            order: 2;
+        }
+    }
+
+    .unordered-list,
+    #my-list {
+        columns: 2;
+        column-gap: 50px;
+    }
+
+    .plan-blueprint {
+        display: block;
+    }
+
+    .header-nav-items {
+        display: block;
+        position: absolute;
+        left: 5px;
+
+        a {
+            color: $white;
+        }
+    }
+
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer-logo {
+        @include justify-content(20px, column);
+        order: 0;
+        flex-grow: 1;
+        align-items: center;
+
+        >img {
+            display: block;
+        }
+
+        .social {
+            @include justify-content(10px, row, space-around);
+        }
+    }
+
+    .footer-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: $xl) {
+    .container {
+        max-width: $lg;
+    }
+
+    .nav-cta--bottom {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .text {
+            width: 135px;
+        }
+    }
+}

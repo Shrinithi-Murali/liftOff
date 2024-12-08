@@ -1,0 +1,275 @@
+// Breakpoints
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//Colors
+
+$white: #fff;
+$black: #000;
+$text-shadow: #F3ECE7;
+$border: #d9d9d9;
+$blur-box-shadow: 0 0 4px 0 #00000010;
+
+$header: #15364C;
+$section: #F9F6F4;
+
+$color-1: #CDDBE3;
+$color-2: #E7E1D9;
+$color-3: #A6C3D2;
+$color-4: #E8D0CD;
+$color-5: #2F6079;
+
+
+//Extend styles
+
+%unordered-list-style {
+    background-image: url("./assets/Blob.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+//Fonts
+
+$brandon-grotesque: "brandon-grotesque", sans-serif;
+$raleway: "Raleway", sans-serif;
+$caveat: "Caveat", cursive;
+
+// Brandon Grotesque Thin
+$brandon-grotesque-thin: (
+    font-weight: 100,
+    font-style: normal
+);
+
+// Brandon Grotesque Thin Italic
+$brandon-grotesque-thin-italic: (
+    font-weight: 100,
+    font-style: italic
+);
+
+// Brandon Grotesque Light
+$brandon-grotesque-light: (
+    font-weight: 300,
+    font-style: normal
+);
+
+// Brandon Grotesque Light Italic
+$brandon-grotesque-light-italic: (
+    font-weight: 300,
+    font-style: italic
+);
+
+// Brandon Grotesque Regular
+$brandon-grotesque-regular: (
+    font-weight: 400,
+    font-style: normal
+);
+
+// Brandon Grotesque Regular Italic
+$brandon-grotesque-regular-italic: (
+    font-weight: 400,
+    font-style: italic
+);
+
+// Brandon Grotesque Medium
+$brandon-grotesque-medium: (
+    font-weight: 500,
+    font-style: normal
+);
+
+// Brandon Grotesque Medium Italic
+$brandon-grotesque-medium-italic: (
+    font-weight: 500,
+    font-style: italic
+);
+
+// Brandon Grotesque Bold
+$brandon-grotesque-bold: (
+    font-weight: 700,
+    font-style: normal
+);
+
+// Brandon Grotesque Bold Italic
+$brandon-grotesque-bold-italic: (
+    font-weight: 700,
+    font-style: italic
+);
+
+// Brandon Grotesque Black
+$brandon-grotesque-black: (
+    font-weight: 900,
+    font-style: normal
+);
+
+// Brandon Grotesque Black Italic
+$brandon-grotesque-black-italic: (
+    font-weight: 900,
+    font-style: italic
+);
+
+// Raleway Thin
+$raleway-thin: (
+    font-weight: 100,
+    font-style: normal
+);
+
+// Raleway Thin Italic
+$raleway-thin-italic: (
+    font-weight: 100,
+    font-style: italic
+);
+
+// Raleway Extra Light
+$raleway-extra-light: (
+    font-weight: 200,
+    font-style: normal
+);
+
+// Raleway Extra Light Italic
+$raleway-extra-light-italic: (
+    font-weight: 200,
+    font-style: italic
+);
+
+// Raleway Light
+$raleway-light: (
+    font-weight: 300,
+    font-style: normal
+);
+
+// Raleway Light Italic
+$raleway-light-italic: (
+    font-weight: 300,
+    font-style: italic
+);
+
+// Raleway Regular
+$raleway-regular: (
+    font-weight: 400,
+    font-style: normal
+);
+
+// Raleway Regular Italic
+$raleway-regular-italic: (
+    font-weight: 400,
+    font-style: italic
+);
+
+// Raleway Medium
+$raleway-medium: (
+    font-weight: 500,
+    font-style: normal
+);
+
+// Raleway Medium Italic
+$raleway-medium-italic: (
+    font-weight: 500,
+    font-style: italic
+);
+
+// Raleway Semi Bold
+$raleway-semi-bold: (
+    font-weight: 600,
+    font-style: normal
+);
+
+// Raleway Semi Bold Italic
+$raleway-semi-bold-italic: (
+    font-weight: 600,
+    font-style: italic
+);
+
+// Raleway Bold
+$raleway-bold: (
+    font-weight: 700,
+    font-style: normal
+);
+
+// Raleway Bold Italic
+$raleway-bold-italic: (
+    font-weight: 700,
+    font-style: italic
+);
+
+// Raleway Extra Bold
+$raleway-extra-bold: (
+    font-weight: 800,
+    font-style: normal
+);
+
+// Raleway Extra Bold Italic
+$raleway-extra-bold-italic: (
+    font-weight: 800,
+    font-style: italic
+);
+
+// Raleway Black
+$raleway-black: (
+    font-weight: 900,
+    font-style: normal
+);
+
+// Raleway Black Italic
+$raleway-black-italic: (
+    font-weight: 900,
+    font-style: italic
+);
+
+// Caveat regular Italic
+$caveat-regular-italic: (
+    font-weight: 400,
+    font-style: normal
+);
+
+// Caveat medium Italic
+$caveat-medium-italic: (
+    font-weight: 500,
+    font-style: normal
+);
+
+// Caveat semibold Italic
+$caveat-semibold-italic: (
+    font-weight: 600,
+    font-style: normal
+);
+
+// Caveat bold Italic
+$caveat-bold-italic: (
+    font-weight: 700,
+    font-style: normal
+);
+
+// Mixins
+@mixin brandon-grotesque($font-style) {
+    font-family: $brandon-grotesque;
+    font-weight: map-get($font-style, font-weight);
+    font-style: map-get($font-style, font-style);
+}
+
+@mixin raleway($font-style) {
+    font-family: $raleway;
+    font-weight: map-get($font-style, font-weight);
+    font-style: map-get($font-style, font-style);
+}
+
+@mixin caveat($font-style) {
+    font-family: $caveat;
+    font-weight: map-get($font-style, font-weight);
+    font-style: map-get($font-style, font-style);
+}
+
+@mixin justify-content($gap: 0px, $flex-direction: row, $justify-content: flex-start) {
+    display: flex;
+    gap: $gap;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin divider($bg-color) {
+    flex: 1 1 200px;
+    height: 10px;
+    background-color: $bg-color;
+}
