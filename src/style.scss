@@ -152,6 +152,7 @@ button {
     border: none;
     @include raleway($raleway-bold);
     color: $header;
+    cursor: pointer;
 }
 
 .description {
@@ -314,7 +315,8 @@ footer {
 }
 
 .footer {
-    color: $white
+    color: $white;
+    gap: 50px;
 }
 
 .footer-logo {
@@ -333,6 +335,11 @@ footer {
 .footer-items {
     display: grid;
     gap: 20px;
+
+    a {
+        color: $white;
+        text-decoration: none
+    }
 }
 
 #form {

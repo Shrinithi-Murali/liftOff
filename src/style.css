@@ -175,6 +175,7 @@ button {
   font-weight: 700;
   font-style: normal;
   color: #15364C;
+  cursor: pointer;
 }
 
 .description {
@@ -360,6 +361,7 @@ footer {
 
 .footer {
   color: #fff;
+  gap: 50px;
 }
 
 .footer-logo {
@@ -382,6 +384,10 @@ footer {
 .footer-items {
   display: grid;
   gap: 20px;
+}
+.footer-items a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #form {
