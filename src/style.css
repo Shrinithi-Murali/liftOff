@@ -36,7 +36,7 @@ header {
   padding: 10px;
   padding-block: 50px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -73,6 +73,7 @@ nav .logo {
 .menu {
   position: absolute;
   right: 5px;
+  cursor: pointer;
 }
 
 .nav-cta--bottom {
@@ -173,14 +174,16 @@ section:nth-of-type(even) {
 button {
   background-color: #E8D0CD;
   border-radius: 4px;
-  padding: 8px;
-  padding-inline: 16px;
+  padding-block: 8px;
+  padding-inline: 40px;
   border: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #15364C;
   cursor: pointer;
+  min-width: 250px;
+  margin-top: 10px;
 }
 
 .description {
@@ -313,12 +316,12 @@ footer {
   color: #2F6079;
 }
 
-.form {
-  display: flex;
-  gap: 10px;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+.form-layouts {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+.form-layouts * {
+  grid-column: span 4;
 }
 
 .form-fields {
@@ -334,25 +337,40 @@ footer {
 .form-fields label {
   text-align: left;
 }
-.form-fields input {
+.form-fields input,
+.form-fields select {
   border-radius: 4px;
   padding: 8px;
   width: 100%;
   border: 2px solid #d9d9d9;
   text-align: left;
+  height: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #828282;
 }
-.form-fields input::-moz-placeholder {
+.form-fields input::-moz-placeholder, .form-fields select::-moz-placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.form-fields input::placeholder {
+.form-fields input::placeholder,
+.form-fields select::placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.form-fields input:focus {
+.form-fields input:focus,
+.form-fields select:focus {
   outline: none;
+}
+.form-fields input option,
+.form-fields select option {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
 }
 
 .section-design div {
@@ -497,6 +515,23 @@ footer {
   }
   .footer-items a {
     text-align: left;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+    align-items: end;
+  }
+  .email,
+  .address,
+  .interested,
+  .linkedIn,
+  .how {
+    grid-column: span 2;
+  }
+  .feedback {
+    grid-column: span 4;
   }
 }
 @media (min-width: 1200px) {

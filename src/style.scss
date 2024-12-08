@@ -25,7 +25,7 @@ header {
     margin: 0 auto;
     padding: 10px;
     padding-block: 50px;
-    @include justify-content(10px, column);
+    @include justify-content(20px, column);
     align-items: center;
 }
 
@@ -58,6 +58,7 @@ nav {
 .menu {
     position: absolute;
     right: 5px;
+    cursor: pointer;
 }
 
 .nav-cta--bottom {
@@ -150,12 +151,14 @@ section:nth-of-type(even) {
 button {
     background-color: $color-4;
     border-radius: 4px;
-    padding: 8px;
-    padding-inline: 16px;
+    padding-block: 8px;
+    padding-inline: 40px;
     border: none;
     @include raleway($raleway-bold);
     color: $header;
     cursor: pointer;
+    min-width: 250px;
+    margin-top: 10px;
 }
 
 .description {
@@ -272,9 +275,13 @@ footer {
     }
 }
 
-.form {
-    @include justify-content(10px, row);
-    flex-wrap: wrap;
+.form-layouts {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+
+    * {
+        grid-column: span 4;
+    }
 }
 
 .form-fields {
@@ -288,12 +295,16 @@ footer {
         text-align: left;
     }
 
-    input {
+    input,
+    select {
         border-radius: 4px;
         padding: 8px;
         width: 100%;
         border: 2px solid $border;
         text-align: left;
+        height: 40px;
+        @include raleway($raleway-regular);
+        color: $placeholder;
 
         &::placeholder {
             @include raleway($raleway-regular);
@@ -301,6 +312,11 @@ footer {
 
         &:focus {
             outline: none;
+        }
+
+        option {
+            @include raleway($raleway-regular);
+            text-align: left;
         }
     }
 }
@@ -453,6 +469,26 @@ footer {
         a {
             text-align: left;
         }
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 16px;
+        align-items: end;
+    }
+
+    .email,
+    .address,
+    .interested,
+    .linkedIn,
+    .how {
+        grid-column: span 2;
+    }
+
+    .feedback {
+        grid-column: span 4;
     }
 }
 
