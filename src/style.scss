@@ -130,16 +130,19 @@ section:nth-of-type(even) {
 
 .title {
     @include raleway($raleway-medium);
-    display: flex;
+    width: 100%;
+    @include justify-content(10px, row, space-between);
+    align-items: center;
     position: relative;
     font-size: 22px;
     color: $header;
 
-    .line {
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        color: $black;
+    &::before,
+    &::after {
+        content: "";
+        flex: 1 1;
+        border-bottom: 2px solid $line;
+        margin: auto;
     }
 }
 
@@ -349,7 +352,7 @@ footer {
     scroll-margin-block-end: 110px;
 }
 
-.visually-hidden{
+.visually-hidden {
     visibility: hidden;
     width: 1px;
     height: 1px;
@@ -446,7 +449,8 @@ footer {
 
     .footer-items {
         grid-template-columns: repeat(3, 1fr);
-        a{
+
+        a {
             text-align: left;
         }
     }
