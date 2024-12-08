@@ -129,7 +129,6 @@ section:nth-of-type(even) {
 
 .img-container {
   position: relative;
-  overflow: hidden;
 }
 
 .info-section {
@@ -303,6 +302,10 @@ footer {
   margin-right: 10px;
   padding: 10px;
   color: #fff;
+}
+
+.settings {
+  order: -1;
 }
 
 .unordered-list {

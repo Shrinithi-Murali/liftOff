@@ -109,7 +109,6 @@ section:nth-of-type(even) {
 
 .img-container {
     position: relative;
-    overflow: hidden;
 }
 
 .info-section {
@@ -261,6 +260,10 @@ footer {
         @extend %unordered-list-style;
         color: $white;
     }
+}
+
+.settings{
+    order: -1;
 }
 
 .unordered-list {
