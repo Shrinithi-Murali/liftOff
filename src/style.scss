@@ -279,13 +279,10 @@ footer {
     }
 }
 
-.form-layouts {
+.form {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
-
-    * {
-        grid-column: span 4;
-    }
 }
 
 .form-fields {
@@ -300,7 +297,7 @@ footer {
     }
 
     input,
-    select {
+    select, textarea {
         border-radius: 4px;
         padding: 8px;
         width: 100%;
@@ -308,7 +305,6 @@ footer {
         text-align: left;
         height: 40px;
         @include raleway($raleway-regular);
-        color: $placeholder;
 
         &::placeholder {
             @include raleway($raleway-regular);

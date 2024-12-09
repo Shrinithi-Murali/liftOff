@@ -320,12 +320,10 @@ footer {
   color: #2F6079;
 }
 
-.form-layouts {
+.form {
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 16px;
-}
-.form-layouts * {
-  grid-column: span 4;
 }
 
 .form-fields {
@@ -342,7 +340,7 @@ footer {
   text-align: left;
 }
 .form-fields input,
-.form-fields select {
+.form-fields select, .form-fields textarea {
   border-radius: 4px;
   padding: 8px;
   width: 100%;
@@ -352,25 +350,24 @@ footer {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #828282;
 }
-.form-fields input::-moz-placeholder, .form-fields select::-moz-placeholder {
+.form-fields input::-moz-placeholder, .form-fields select::-moz-placeholder, .form-fields textarea::-moz-placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .form-fields input::placeholder,
-.form-fields select::placeholder {
+.form-fields select::placeholder, .form-fields textarea::placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .form-fields input:focus,
-.form-fields select:focus {
+.form-fields select:focus, .form-fields textarea:focus {
   outline: none;
 }
 .form-fields input option,
-.form-fields select option {
+.form-fields select option, .form-fields textarea option {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
